@@ -4,6 +4,7 @@
 ![ Vite ](public/vite.png)
 ![ Typescript ](public/ts.png)
 ![ tailwindcss ](public/tailwindcss.png)
+![ Docker ](public/docker.png)
 ------------------
 ### A simple web application using Vuejs with Typescript. This app allow choose the size of a yellow srhit
 
@@ -29,6 +30,17 @@ npm run build
 ```
 + Note: This app vite serve it on localhost port 5173. Enter to the router on your browser
 localhost:5173
++ Options with docker to build image
+```
+docker build -t sizeselector .
+```
++ Running the new docker image created 
+```
+docker run -it -p 8080:8080 sizeselector
+```
 -------------------
 # Preview
 ![ preview ](public/preview/preview.png)
+------------------
+[Visit the creator's repository](https://github.com/userlg)
+------------------

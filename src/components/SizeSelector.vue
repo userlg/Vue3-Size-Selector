@@ -16,9 +16,9 @@ const emits = defineEmits<{
 <template>
 
     <div class="flex flex-row gap-1 sm:gap-2 items-center justify-center mx-auto">
-        <button v-for="( size, index ) in possibleSizes" :key="index" :class="{ 'active': props.selectedSize == size }"
+        <button v-for="( size, index ) in possibleSizes" v-bind:key="index" :class="{ 'active': props.selectedSize == size }"
             class="bg-white w-1/2 sm:w-12 border border-black rounded p-2" @click="emits('onChangedSize', size)">
-            <h3 class="text-center text-xs sm:text-base">{{ size }}</h3>
+            <h3 class="text-center text-xs sm:text-base"> {{ size }}</h3>
         </button>
     </div>
 

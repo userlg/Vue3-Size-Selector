@@ -41,6 +41,9 @@ docker run -it -p 8080:8080 sizeselector
 -------------------
 # Preview
 ![ preview ](public/preview/preview.png)
+-------------------
+# Demo Video
+[ Link ](https://youtu.be/he_1WWAbIL0)
 ------------------
 [Visit the creator's repository](https://github.com/userlg)
 ------------------

@@ -7,5 +7,6 @@ export default defineConfig({
     globals: true,
     environment: 'happy-dom',
   },
+  base: '/Vue3-Size-Selector/',
   plugins: [vue()],
 })

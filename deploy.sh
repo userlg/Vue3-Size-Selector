@@ -9,7 +9,6 @@ npm install
 # build
 npm run build
 
-# navigate into the build output directory
 cd dist
 
 git init

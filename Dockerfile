@@ -1,18 +1,27 @@
-FROM node:19-alpine3.16
+#-------------------------------------#
+# build stage
+FROM node:19-alpine3.16 as build-stage
 
-RUN npm install -g http-server
-
-WORKDIR /var/www/html/app
+WORKDIR /app
 
 COPY package.json .
 
-RUN npm i
+RUN yarn
 
 COPY . .
 
-RUN npm run build
+RUN yarn add tsc vue-tsc
 
-EXPOSE  8080
+RUN yarn build
 
-CMD [ "http-server", "dist" ]
+# production stage
+FROM nginx:latest as production-stage
+
+COPY --from=build-stage /app/dist /usr/share/nginx/html
+
+EXPOSE 80
+
+CMD ["nginx", "-g", "daemon off;"]
+
+#----------END OF THE FILE----------#
 
